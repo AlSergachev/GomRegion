@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         setListeners();
         setAdapter();
-        setTabLayout();
+//        setTabLayout();
     }
 
     private void setAdapter(){
@@ -34,29 +34,6 @@ public class MainActivity extends AppCompatActivity {
         binding.pager.setAdapter(fragmentAdapter);
     }
 
-    private void setTabLayout(){
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Главная страница"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Сельсоветы в социальных сетях"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Сельские исполнительные комитеты в социальных сетях"));
-        binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                binding.pager.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {}
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {}
-        });
-        binding.pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position));
-            }
-        });
-    }
 
     private void setListeners() {
         binding.icTelegram.setOnClickListener(v ->

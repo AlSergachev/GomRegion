@@ -1,26 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context=".pages.FirstFragment">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:columnCount="2"
+        >
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:text="@string/hello_blank_fragment" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/_10sdp"
+            app:cardElevation="@dimen/_7sdp"
+            app:cardCornerRadius="@dimen/_20sdp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    style="@style/GridLayoutImageStyle"
+                    android:src="@drawable/ic_facebook"/>
+                <TextView
+                    style="@style/GridLayoutTextStyle"
+                    android:text="Какой-то сельсовет"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
 
 
 </ScrollView>
