@@ -1,7 +1,10 @@
 package com.example.gomregion.presentation.pages;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -9,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.gomregion.R;
+import com.example.gomregion.databinding.FragmentMainBinding;
+import com.example.gomregion.domain.utilities.Links;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +22,9 @@ import com.example.gomregion.R;
  */
 public class MainFragment extends Fragment {
 
+
+    AppCompatButton btmMagazine;
+    AppCompatButton btmGomelisp;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -55,12 +63,25 @@ public class MainFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View inflaterView = inflater.inflate(R.layout.fragment_main, container, false);
+        btmMagazine = inflaterView.findViewById(R.id.btmMagazine);
+        btmGomelisp = inflaterView.findViewById(R.id.btmGomelisp);
+        setListeners();
+        return inflaterView;
     }
+
+    private void setListeners() {
+        btmMagazine.setOnClickListener(v ->
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_SOZHNEWS))));
+        btmGomelisp.setOnClickListener(v ->
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_GOMELISP))));
+    }
+
 }

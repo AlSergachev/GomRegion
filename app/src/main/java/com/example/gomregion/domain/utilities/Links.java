@@ -11,5 +11,21 @@ public class Links {
     public static final String LINK_FACEBOOK = "https://www.facebook.com/groups/491366801748193/?ref=share";
     public static final String LINK_SOZHNEWS = "https://sozhnews.by/";
     public static final String LINK_GOMELISP = "http://gomelisp.gov.by/";
+    public static final String LINK_INST_FIRST = "https://www.instagram.com/azdelselsovet/";
+    public static final String LINK_INST_SECOND = "https://www.instagram.com/bobselisp/";
+    public static final String LINK_INST_THIRD = "https://www.instagram.com/bolshevikselisp/";
+    public static final String LINK_INST_FOURTH = "https://www.instagram.com/dolgoleskyselsovet/";
+    public static final String LINK_INST_FIFTH = "https://www.instagram.com/krasnenselsovet/";
+    public static final String LINK_INST_SIXTH = "https://www.instagram.com/pribytselisp/";
+    public static final String LINK_INST_SEVENTH = "https://www.instagram.com/rudnemarimonovskii/";
+    public static final String LINK_INST_EIGHTH = "https://www.instagram.com/terenselisp/";
+    public static final String LINK_INST_NINTH = "https://www.instagram.com/tereshkiselisp/";
+    public static final String LINK_INST_TENTH = "https://www.instagram.com/teriukhskiiselskii/";
+    public static final String LINK_INST_ELEVENTH = "https://www.instagram.com/ulukovselsovet/";
+    public static final String LINK_INST_TWELFTH = "https://www.instagram.com/urickoeall/";
+    public static final String LINK_INST_THIRTEENTH = "https://www.instagram.com/chenkselisp/";
+    public static final String LINK_INST_FOURTEENTH = "https://www.instagram.com/cheretianskii/";
+    public static final String LINK_INST_FIFTEENTH = "";
+
 }
 

@@ -66,10 +66,11 @@
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:elevation="@dimen/_10sdp"
         app:cardCornerRadius="@dimen/_10sdp">
-        <androidx.appcompat.widget.AppCompatImageView
+
+        <ImageView
             android:id="@+id/img_2"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_125sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_127sdp"
             android:background="@drawable/img_2"
             android:contentDescription="@string/todo" />
     </androidx.cardview.widget.CardView>
