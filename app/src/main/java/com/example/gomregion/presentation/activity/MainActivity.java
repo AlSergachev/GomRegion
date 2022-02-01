@@ -1,4 +1,4 @@
-package com.example.gomregion;
+package com.example.gomregion.presentation.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.gomregion.databinding.ActivityMainBinding;
-import com.example.gomregion.utilities.Links;
+import com.example.gomregion.domain.utilities.Links;
+import com.example.gomregion.presentation.FragmentAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         setListeners();
         setAdapter();
-//        setTabLayout();
+        setTabLayout();
     }
 
     private void setAdapter(){
@@ -50,7 +50,25 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_TIKTOK))));
         binding.icFacebook.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_FACEBOOK))));
-
     }
 
+
+    private void setTabLayout(){
+        binding.tabLayout.addTab(binding.tabLayout.newTab());
+        binding.tabLayout.addTab(binding.tabLayout.newTab());
+        binding.tabLayout.addTab(binding.tabLayout.newTab());
+        binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override public void onTabSelected(TabLayout.Tab tab) {
+                binding.pager.setCurrentItem(tab.getPosition());
+            }
+            @Override public void onTabUnselected(TabLayout.Tab tab) {}
+            @Override public void onTabReselected(TabLayout.Tab tab) {}
+        });
+        binding.pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                binding.tabLayout.selectTab(binding.tabLayout.getTabAt(position));
+            }
+        });
+    }
 }

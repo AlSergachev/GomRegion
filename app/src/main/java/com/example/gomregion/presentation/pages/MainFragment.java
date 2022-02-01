@@ -1,4 +1,4 @@
-package com.example.gomregion.pages;
+package com.example.gomregion.presentation.pages;
 
 import android.os.Bundle;
 

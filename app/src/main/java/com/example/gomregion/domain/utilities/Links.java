@@ -1,4 +1,4 @@
-package com.example.gomregion.utilities;
+package com.example.gomregion.domain.utilities;
 
 public class Links {
     public static final String LINK_TG_REGION = "https://t.me/gomregion";
