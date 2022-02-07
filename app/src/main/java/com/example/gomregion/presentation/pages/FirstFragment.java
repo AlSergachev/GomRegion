@@ -6,119 +6,62 @@ import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.gomregion.R;
 import com.example.gomregion.domain.utilities.Links;
+import com.example.gomregion.presentation.Selsovet;
+import com.example.gomregion.presentation.SelsovetAdapter;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FirstFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
 public class FirstFragment extends Fragment {
 
-    CardView item_01, item_02, item_03, item_04, item_05, item_06, item_07, item_08, item_09,
-            item_10, item_11, item_12, item_13, item_14;
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FirstFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FirstFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FirstFragment newInstance(String param1, String param2) {
-        FirstFragment fragment = new FirstFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    private ArrayList<Selsovet> selsovetList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View inflaterView = inflater.inflate(R.layout.fragment_first, container, false);
-        View resultView = setListener(inflaterView);
+        selsovetList = fillingList();
 
-        return resultView;
-    }
-
-    private View setListener(View inflaterView){
-        item_01 = inflaterView.findViewById(R.id.item_01);
-        item_02 = inflaterView.findViewById(R.id.item_02);
-        item_03 = inflaterView.findViewById(R.id.item_03);
-        item_04 = inflaterView.findViewById(R.id.item_04);
-        item_05 = inflaterView.findViewById(R.id.item_05);
-        item_06 = inflaterView.findViewById(R.id.item_06);
-        item_07 = inflaterView.findViewById(R.id.item_07);
-        item_08 = inflaterView.findViewById(R.id.item_08);
-        item_09 = inflaterView.findViewById(R.id.item_09);
-        item_10 = inflaterView.findViewById(R.id.item_10);
-        item_11 = inflaterView.findViewById(R.id.item_11);
-        item_12 = inflaterView.findViewById(R.id.item_12);
-        item_13 = inflaterView.findViewById(R.id.item_13);
-        item_14 = inflaterView.findViewById(R.id.item_14);
-
-        item_01.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_FIRST))));
-        item_02.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_SECOND))));
-        item_03.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_THIRD))));
-        item_04.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_FOURTH))));
-        item_05.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_FIFTH))));
-        item_06.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_SIXTH))));
-        item_07.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_SEVENTH))));
-        item_08.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_EIGHTH))));
-        item_09.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_NINTH))));
-        item_10.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_TENTH))));
-        item_11.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_ELEVENTH))));
-        item_12.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_TWELFTH))));
-        item_13.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_THIRTEENTH))));
-        item_14.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_INST_FOURTEENTH))));
-
+        RecyclerView recyclerView = inflaterView.findViewById(R.id.recycler_view_inst);
+        SelsovetAdapter adapter = new SelsovetAdapter(inflaterView.getContext(), selsovetList);
+        recyclerView.setLayoutManager(new GridLayoutManager(inflaterView.getContext(), 2));
+        recyclerView.setAdapter(adapter);
 
         return inflaterView;
     }
+
+    private ArrayList<Selsovet> fillingList(){
+        ArrayList<Selsovet> list = new ArrayList<>();
+        list.add(new Selsovet(Links.LINK_INST_FIRST, "Азделинский сельсовет", R.drawable.image_01));
+        list.add(new Selsovet(Links.LINK_INST_SECOND, "Бобовичский сельсовет", R.drawable.image_02));
+        list.add(new Selsovet(Links.LINK_INST_THIRD, "Большевитский сельсовет", R.drawable.image_03));
+        list.add(new Selsovet(Links.LINK_INST_FOURTH, "Долголесский сельсовет", R.drawable.image_04));
+        list.add(new Selsovet(Links.LINK_INST_FIFTH, "Красненский сельсовет", R.drawable.image_05));
+        list.add(new Selsovet(Links.LINK_INST_SECOND, "Прибытковский сельсовет", R.drawable.image_06));
+        list.add(new Selsovet(Links.LINK_INST_SEVENTH, "Руднемаримоновский сельсовет", R.drawable.image_07));
+        list.add(new Selsovet(Links.LINK_INST_EIGHTH, "Тереничский сельсовет", R.drawable.image_08));
+        list.add(new Selsovet(Links.LINK_INST_NINTH, "Терешковичский сельсовет", R.drawable.image_09));
+        list.add(new Selsovet(Links.LINK_INST_TENTH, "Терюхский сельсовет", R.drawable.image_10));
+        list.add(new Selsovet(Links.LINK_INST_ELEVENTH, "Улуковский сельсовет", R.drawable.image_11));
+        list.add(new Selsovet(Links.LINK_INST_TWELFTH, "Урицкий сельсовет", R.drawable.image_12));
+        list.add(new Selsovet(Links.LINK_INST_THIRTEENTH, "Ченковский сельсовет", R.drawable.image_13));
+        list.add(new Selsovet(Links.LINK_INST_FOURTEENTH, "Черетянский сельсовет", R.drawable.image_14));
+
+        return list;
+    }
+
 }
