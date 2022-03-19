@@ -78,6 +78,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:background="@drawable/ic_telegram"
+            android:backgroundTint="@color/light_beige"
             />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -86,7 +87,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:background="@drawable/ic_instagram"
-            />
+            android:backgroundTint="@color/light_beige"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ic_youtube"
@@ -94,7 +95,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:background="@drawable/ic_youtube"
-            />
+            android:backgroundTint="@color/light_beige"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ic_ok"
@@ -102,7 +103,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:background="@drawable/ic_ok"
-            />
+            android:backgroundTint="@color/light_beige"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ic_vk"
@@ -110,7 +111,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:background="@drawable/ic_vk"
-            />
+            android:backgroundTint="@color/light_beige"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ic_tiktok"
@@ -118,7 +119,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:background="@drawable/ic_tiktok"
-            />
+            android:backgroundTint="@color/light_beige"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ic_facebook"
@@ -126,7 +127,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_4sdp"
             android:background="@drawable/ic_facebook"
-            />
+            android:backgroundTint="@color/light_beige"/>
 
     </LinearLayout>
 
