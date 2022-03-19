@@ -22,7 +22,7 @@
         android:elevation="@dimen/_10sdp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btmMagazine"
+        android:id="@+id/btn_magazine"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
@@ -34,13 +34,25 @@
         android:textSize="@dimen/_12ssp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btmGomelisp"
+        android:id="@+id/btn_gomelisp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:background="@drawable/button_shape"
         android:text="@string/gomelisp"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_12ssp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_appeals"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/button_shape"
+        android:text="@string/appeals"
         android:textAllCaps="false"
         android:textColor="@color/blue"
         android:textSize="@dimen/_12ssp" />

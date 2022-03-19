@@ -24,8 +24,9 @@ import com.example.gomregion.domain.utilities.Links;
 
 public class MainFragment extends Fragment {
 
-    AppCompatButton btmMagazine;
-    AppCompatButton btmGomelisp;
+    AppCompatButton btnMagazine;
+    AppCompatButton btnGomelisp;
+    AppCompatButton btnAppeals;
     CardView card;
     ImageView img;
     View mainView;
@@ -44,8 +45,9 @@ public class MainFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         getWidthDisplay();
         setImages();
-        btmMagazine = view.findViewById(R.id.btmMagazine);
-        btmGomelisp = view.findViewById(R.id.btmGomelisp);
+        btnMagazine = view.findViewById(R.id.btn_magazine);
+        btnGomelisp = view.findViewById(R.id.btn_gomelisp);
+        btnAppeals = view.findViewById(R.id.btn_appeals);
         setListeners();
     }
 
@@ -73,10 +75,12 @@ public class MainFragment extends Fragment {
     }
 
     private void setListeners() {
-        btmMagazine.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_SOZHNEWS))));
-        btmGomelisp.setOnClickListener(v ->
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_GOMELISP))));
+        btnMagazine.setOnClickListener(v ->
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_SOZH_NEWS))));
+        btnGomelisp.setOnClickListener(v ->
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_GOMEL_ISP))));
+        btnAppeals.setOnClickListener(v ->
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_FOR_APPEALS))));
     }
 
 }
