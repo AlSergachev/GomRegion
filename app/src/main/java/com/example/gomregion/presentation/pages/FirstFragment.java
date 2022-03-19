@@ -1,15 +1,9 @@
 package com.example.gomregion.presentation.pages;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.Point;
-import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.annotation.Dimension;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,11 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.TextView;
 
 import com.example.gomregion.R;
 import com.example.gomregion.data.DataProvider;
-import com.example.gomregion.domain.utilities.Links;
 import com.example.gomregion.presentation.Selsovet;
 import com.example.gomregion.presentation.SelsovetAdapter;
 

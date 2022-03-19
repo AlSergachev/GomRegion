@@ -53,9 +53,9 @@ public class SelsovetAdapter extends RecyclerView.Adapter<SelsovetAdapter.MyView
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView textView;
-        RoundedImageView imageView;
-        CardView cardView;
+        final TextView textView;
+        final RoundedImageView imageView;
+        final CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -15,8 +15,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
-    FragmentAdapter fragmentAdapter;
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setAdapter(){
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentAdapter = new FragmentAdapter(fragmentManager, getLifecycle());
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(fragmentManager, getLifecycle());
         binding.pager.setAdapter(fragmentAdapter);
     }
 

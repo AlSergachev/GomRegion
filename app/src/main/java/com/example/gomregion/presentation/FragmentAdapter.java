@@ -8,7 +8,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.gomregion.presentation.pages.FirstFragment;
 import com.example.gomregion.presentation.pages.MainFragment;
-import com.example.gomregion.presentation.pages.SecondFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {
     public FragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
