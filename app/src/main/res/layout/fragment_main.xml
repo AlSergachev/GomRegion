@@ -11,19 +11,15 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/light_beige"
     android:orientation="vertical">
 
-    <FrameLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_0"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/img_header"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_120sdp"
-            android:background="@drawable/img_header"
-            android:contentDescription="@string/todo" />
-    </FrameLayout>
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="0dp"
+        android:elevation="@dimen/_10sdp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btmMagazine"
@@ -60,20 +56,13 @@
         />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:elevation="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_10sdp">
-
-        <ImageView
-            android:id="@+id/img_2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_127sdp"
-            android:background="@drawable/img_2"
-            android:contentDescription="@string/todo" />
-    </androidx.cardview.widget.CardView>
+        app:cardCornerRadius="@dimen/_10sdp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -86,19 +75,13 @@
         />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:elevation="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_10sdp">
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_1"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_150sdp"
-            android:background="@drawable/img_3"
-            android:contentDescription="@string/todo" />
-    </androidx.cardview.widget.CardView>
+        app:cardCornerRadius="@dimen/_10sdp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -126,19 +109,13 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:elevation="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_10sdp">
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_3"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_150sdp"
-            android:background="@drawable/img_4"
-            android:contentDescription="@string/todo" />
-    </androidx.cardview.widget.CardView>
+        app:cardCornerRadius="@dimen/_10sdp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
