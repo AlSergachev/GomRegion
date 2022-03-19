@@ -18,17 +18,15 @@ public class FragmentAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        switch (position){
-            case 1:
-                return new FirstFragment();
-            case 2:
-                return new SecondFragment();
+        if (position == 1)
+            return new FirstFragment();
+        else {
+            return new MainFragment();
         }
-        return new MainFragment();
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 2;
     }
 }

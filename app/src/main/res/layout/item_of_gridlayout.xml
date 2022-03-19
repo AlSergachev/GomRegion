@@ -1,27 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_columnWeight="1"
-    android:layout_margin="@dimen/_10sdp"
-    app:cardElevation="@dimen/_7sdp"
-    app:cardCornerRadius="@dimen/_20sdp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_7sdp">
 
         <LinearLayout
+            android:id="@+id/linear_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical">
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/image"
-                style="@style/GridLayoutImageStyle"/>
+                style="@style/GridLayoutImageStyle" />
+
             <TextView
                 android:id="@+id/text"
                 style="@style/GridLayoutTextStyle"
-                android:text="Какой-то сельсовет"/>
+                android:text="Какой-то сельсовет" />
         </LinearLayout>
 
 
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
+
+

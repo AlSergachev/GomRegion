@@ -1,20 +1,30 @@
 package com.example.gomregion.presentation.pages;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.Dimension;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.gomregion.R;
+import com.example.gomregion.data.DataProvider;
 import com.example.gomregion.domain.utilities.Links;
 import com.example.gomregion.presentation.Selsovet;
 import com.example.gomregion.presentation.SelsovetAdapter;
@@ -24,6 +34,7 @@ import java.util.ArrayList;
 public class FirstFragment extends Fragment {
 
     private ArrayList<Selsovet> selsovetList;
+    private final int WIDTH_ITEM = 170;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,34 +45,26 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View inflaterView = inflater.inflate(R.layout.fragment_first, container, false);
-        selsovetList = fillingList();
+        selsovetList = DataProvider.dataProvider();
 
         RecyclerView recyclerView = inflaterView.findViewById(R.id.recycler_view_inst);
         SelsovetAdapter adapter = new SelsovetAdapter(inflaterView.getContext(), selsovetList);
-        recyclerView.setLayoutManager(new GridLayoutManager(inflaterView.getContext(), 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(inflaterView.getContext(), getCollum()));
         recyclerView.setAdapter(adapter);
-
         return inflaterView;
     }
 
-    private ArrayList<Selsovet> fillingList(){
-        ArrayList<Selsovet> list = new ArrayList<>();
-        list.add(new Selsovet(Links.LINK_INST_FIRST, "Азделинский сельсовет", R.drawable.image_01));
-        list.add(new Selsovet(Links.LINK_INST_SECOND, "Бобовичский сельсовет", R.drawable.image_02));
-        list.add(new Selsovet(Links.LINK_INST_THIRD, "Большевитский сельсовет", R.drawable.image_03));
-        list.add(new Selsovet(Links.LINK_INST_FOURTH, "Долголесский сельсовет", R.drawable.image_04));
-        list.add(new Selsovet(Links.LINK_INST_FIFTH, "Красненский сельсовет", R.drawable.image_05));
-        list.add(new Selsovet(Links.LINK_INST_SECOND, "Прибытковский сельсовет", R.drawable.image_06));
-        list.add(new Selsovet(Links.LINK_INST_SEVENTH, "Руднемаримоновский сельсовет", R.drawable.image_07));
-        list.add(new Selsovet(Links.LINK_INST_EIGHTH, "Тереничский сельсовет", R.drawable.image_08));
-        list.add(new Selsovet(Links.LINK_INST_NINTH, "Терешковичский сельсовет", R.drawable.image_09));
-        list.add(new Selsovet(Links.LINK_INST_TENTH, "Терюхский сельсовет", R.drawable.image_10));
-        list.add(new Selsovet(Links.LINK_INST_ELEVENTH, "Улуковский сельсовет", R.drawable.image_11));
-        list.add(new Selsovet(Links.LINK_INST_TWELFTH, "Урицкий сельсовет", R.drawable.image_12));
-        list.add(new Selsovet(Links.LINK_INST_THIRTEENTH, "Ченковский сельсовет", R.drawable.image_13));
-        list.add(new Selsovet(Links.LINK_INST_FOURTEENTH, "Черетянский сельсовет", R.drawable.image_14));
+    private int getCollum() {
+        WindowManager wm = (WindowManager) requireContext().getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        return size.x/dpToPx(WIDTH_ITEM);
+    }
 
-        return list;
+    private int dpToPx(int dp) {
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, displayMetrics);
     }
 
 }
