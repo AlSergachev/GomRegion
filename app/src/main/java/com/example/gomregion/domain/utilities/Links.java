@@ -30,6 +30,16 @@ public class Links {
     public static final String LINK_INST_FOURTEENTH = "https://www.instagram.com/cheretianskii/";
     public static final String LINK_INST_FIFTEENTH = "https://www.instagram.com/sarpilovsovet/";
     public static final String LINK_INST_SIXTEENTH = "https://www.instagram.com/priborselispolkom/";
+    public static final String LINK_INST_SEVENTEENTH = "https://www.instagram.com/grabovselisp/";
+
+    public static final String LINK_JUST_FIRST = "http://gomelisp.gov.by/";
+    public static final String LINK_JUST_SECOND = "https://sozhnews.by/";
+    public static final String LINK_JUST_THIRD = "https://www.instagram.com/gomelregion_prof/";
+    public static final String LINK_JUST_FOURTH = "https://www.instagram.com/urozhaigomel/";
+    public static final String LINK_JUST_FIFTH = "http://xn--c1aengdl7cyc.xn--90ais/";
+    public static final String LINK_JUST_SIXTH = "https://www.instagram.com/tcson_gomelregion/";
+    public static final String LINK_JUST_SEVENTH = "https://www.instagram.com/gu.tsodbo_gr/";
+    public static final String LINK_JUST_EIGHTH = "http://gomelrcbs.by/";
 
 }
 

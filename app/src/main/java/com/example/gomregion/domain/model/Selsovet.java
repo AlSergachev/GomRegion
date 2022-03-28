@@ -1,9 +1,9 @@
-package com.example.gomregion.presentation;
+package com.example.gomregion.domain.model;
 
 public class Selsovet {
-    String link;
-    String title;
-    int image;
+    private String link;
+    private String title;
+    private int image;
 
     public Selsovet(String link, String title, int image) {
         this.link = link;

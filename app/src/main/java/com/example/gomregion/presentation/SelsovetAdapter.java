@@ -13,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gomregion.R;
+import com.example.gomregion.domain.model.Selsovet;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.ArrayList;
@@ -32,18 +33,17 @@ public class SelsovetAdapter extends RecyclerView.Adapter<SelsovetAdapter.MyView
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.cardview_item_inst, parent, false);
-
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.textView.setText(selsovetList.get(position).title);
+        holder.textView.setText(selsovetList.get(position).getTitle());
         holder.imageView.setImageResource(selsovetList.get(position).getImage());
 
         holder.cardView.setOnClickListener(v ->
-                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(selsovetList.get(position).link))));
+                context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(selsovetList.get(position).getLink()))));
     }
 
     @Override
@@ -51,7 +51,7 @@ public class SelsovetAdapter extends RecyclerView.Adapter<SelsovetAdapter.MyView
         return selsovetList.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         final TextView textView;
         final RoundedImageView imageView;

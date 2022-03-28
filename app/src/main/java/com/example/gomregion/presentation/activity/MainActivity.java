@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private void setTabLayout(){
         binding.tabLayout.addTab(binding.tabLayout.newTab());
         binding.tabLayout.addTab(binding.tabLayout.newTab());
+        binding.tabLayout.addTab(binding.tabLayout.newTab());
         binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override public void onTabSelected(TabLayout.Tab tab) {
                 binding.pager.setCurrentItem(tab.getPosition());

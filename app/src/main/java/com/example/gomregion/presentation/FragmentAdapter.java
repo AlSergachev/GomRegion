@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.gomregion.presentation.pages.FirstFragment;
 import com.example.gomregion.presentation.pages.MainFragment;
+import com.example.gomregion.presentation.pages.SecondFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {
     public FragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
@@ -19,6 +20,9 @@ public class FragmentAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         if (position == 1)
             return new FirstFragment();
+        else if (position == 2){
+            return new SecondFragment();
+        }
         else {
             return new MainFragment();
         }
@@ -26,6 +30,6 @@ public class FragmentAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 2;
+        return 3;
     }
 }

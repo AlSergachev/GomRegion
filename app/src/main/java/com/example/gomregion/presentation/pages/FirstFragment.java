@@ -18,7 +18,7 @@ import android.view.WindowManager;
 
 import com.example.gomregion.R;
 import com.example.gomregion.data.DataProvider;
-import com.example.gomregion.presentation.Selsovet;
+import com.example.gomregion.domain.model.Selsovet;
 import com.example.gomregion.presentation.SelsovetAdapter;
 
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View inflaterView = inflater.inflate(R.layout.fragment_first, container, false);
-        selsovetList = DataProvider.dataProvider();
+        selsovetList = DataProvider.dataProviderSelsovet();
 
         RecyclerView recyclerView = inflaterView.findViewById(R.id.recycler_view_inst);
         SelsovetAdapter adapter = new SelsovetAdapter(inflaterView.getContext(), selsovetList);

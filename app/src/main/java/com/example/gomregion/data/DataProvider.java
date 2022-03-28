@@ -1,13 +1,14 @@
 package com.example.gomregion.data;
 
 import com.example.gomregion.R;
+import com.example.gomregion.domain.model.JustLink;
 import com.example.gomregion.domain.utilities.Links;
-import com.example.gomregion.presentation.Selsovet;
+import com.example.gomregion.domain.model.Selsovet;
 
 import java.util.ArrayList;
 
 public class DataProvider {
-    public static ArrayList<Selsovet> dataProvider() {
+    public static ArrayList<Selsovet> dataProviderSelsovet() {
         ArrayList<Selsovet> list = new ArrayList<>();
         list.add(new Selsovet(Links.LINK_INST_FIRST, "Азделинский сельсовет", R.drawable.image_01));
         list.add(new Selsovet(Links.LINK_INST_SECOND, "Бобовичский сельсовет", R.drawable.image_02));
@@ -25,6 +26,21 @@ public class DataProvider {
         list.add(new Selsovet(Links.LINK_INST_FOURTEENTH, "Черетянский сельсовет", R.drawable.image_14));
         list.add(new Selsovet(Links.LINK_INST_FIFTEENTH, "Шарпиловский сельсовет", R.drawable.image_15));
         list.add(new Selsovet(Links.LINK_INST_SIXTEENTH, "Приборский сельсовет", R.drawable.image_16));
+        list.add(new Selsovet(Links.LINK_INST_SEVENTEENTH, "Грабовский сельсовет", R.drawable.image_17));
+
+        return list;
+    }
+
+    public static ArrayList<JustLink> dataProviderJustLink() {
+        ArrayList<JustLink> list = new ArrayList<>();
+        list.add(new JustLink(R.string.title_01, R.string.description_01, Links.LINK_JUST_FIRST));
+        list.add(new JustLink(R.string.title_02, R.string.description_02, Links.LINK_JUST_SECOND));
+        list.add(new JustLink(R.string.title_03, R.string.description_03, Links.LINK_JUST_THIRD));
+        list.add(new JustLink(R.string.title_04, R.string.description_04, Links.LINK_JUST_FOURTH));
+        list.add(new JustLink(R.string.title_05, R.string.description_05, Links.LINK_JUST_FIFTH));
+        list.add(new JustLink(R.string.title_06, R.string.description_06, Links.LINK_JUST_SIXTH));
+        list.add(new JustLink(R.string.title_07, R.string.description_07, Links.LINK_JUST_SEVENTH));
+        list.add(new JustLink(R.string.title_08, R.string.description_08, Links.LINK_JUST_EIGHTH));
 
         return list;
     }
