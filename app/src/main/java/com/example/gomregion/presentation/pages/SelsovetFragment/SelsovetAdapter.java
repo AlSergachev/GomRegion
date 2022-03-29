@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation;
+package com.example.gomregion.presentation.pages.SelsovetFragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -38,10 +38,8 @@ public class SelsovetAdapter extends RecyclerView.Adapter<SelsovetAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         holder.textView.setText(selsovetList.get(position).getTitle());
         holder.imageView.setImageResource(selsovetList.get(position).getImage());
-
         holder.cardView.setOnClickListener(v ->
                 context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(selsovetList.get(position).getLink()))));
     }

@@ -1,5 +1,7 @@
 package com.example.gomregion.data;
 
+import androidx.annotation.NonNull;
+
 import com.example.gomregion.R;
 import com.example.gomregion.domain.model.JustLink;
 import com.example.gomregion.domain.utilities.Links;
@@ -31,16 +33,17 @@ public class DataProvider {
         return list;
     }
 
+    @NonNull
     public static ArrayList<JustLink> dataProviderJustLink() {
         ArrayList<JustLink> list = new ArrayList<>();
-        list.add(new JustLink(R.string.title_01, R.string.description_01, Links.LINK_JUST_FIRST));
-        list.add(new JustLink(R.string.title_02, R.string.description_02, Links.LINK_JUST_SECOND));
-        list.add(new JustLink(R.string.title_03, R.string.description_03, Links.LINK_JUST_THIRD));
-        list.add(new JustLink(R.string.title_04, R.string.description_04, Links.LINK_JUST_FOURTH));
-        list.add(new JustLink(R.string.title_05, R.string.description_05, Links.LINK_JUST_FIFTH));
-        list.add(new JustLink(R.string.title_06, R.string.description_06, Links.LINK_JUST_SIXTH));
-        list.add(new JustLink(R.string.title_07, R.string.description_07, Links.LINK_JUST_SEVENTH));
-        list.add(new JustLink(R.string.title_08, R.string.description_08, Links.LINK_JUST_EIGHTH));
+        list.add(new JustLink(R.string.title_01, R.string.description_01, Links.LINK_JUST_FIRST, R.drawable.just_title_01, true));
+        list.add(new JustLink(R.string.title_02, R.string.description_02, Links.LINK_JUST_SECOND, R.drawable.just_title_02, true));
+        list.add(new JustLink(R.string.title_03, R.string.description_03, Links.LINK_JUST_THIRD, R.drawable.just_ic_03, false));
+        list.add(new JustLink(R.string.title_04, R.string.description_04, Links.LINK_JUST_FOURTH, R.drawable.just_ic_04, false));
+        list.add(new JustLink(R.string.title_05, R.string.description_05, Links.LINK_JUST_FIFTH, R.drawable.just_ic_05, false));
+        list.add(new JustLink(R.string.title_06, R.string.description_06, Links.LINK_JUST_SIXTH, R.drawable.just_ic_06, false));
+        list.add(new JustLink(R.string.title_07, R.string.description_07, Links.LINK_JUST_SEVENTH, R.drawable.just_ic_07, false));
+        list.add(new JustLink(R.string.title_08, R.string.description_08, Links.LINK_JUST_EIGHTH, R.drawable.just_ic_08, false));
 
         return list;
     }

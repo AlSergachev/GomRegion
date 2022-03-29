@@ -1,8 +1,6 @@
 package com.example.gomregion.domain.utilities;
 
 public class Links {
-    public static final String LINK_TG_RAISOVET = "https://t.me/gomregion_raisovet";
-
     public static final String LINK_TG_REGION = "https://t.me/gomregion";
     public static final String LINK_INSTAGRAM = "https://www.instagram.com/gomregion/";
     public static final String LINK_YOUTUBE = "https://youtube.com/channel/UCHcC1tf6YWzFl97XhldVh1w";
@@ -40,6 +38,5 @@ public class Links {
     public static final String LINK_JUST_SIXTH = "https://www.instagram.com/tcson_gomelregion/";
     public static final String LINK_JUST_SEVENTH = "https://www.instagram.com/gu.tsodbo_gr/";
     public static final String LINK_JUST_EIGHTH = "http://gomelrcbs.by/";
-
 }
 

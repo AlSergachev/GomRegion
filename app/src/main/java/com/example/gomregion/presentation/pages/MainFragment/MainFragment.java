@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation.pages;
+package com.example.gomregion.presentation.pages.MainFragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -35,9 +35,9 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_main, container, false);
-        mainView = v;
-        return v;
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        mainView = view;
+        return view;
     }
 
     @Override
@@ -82,5 +82,4 @@ public class MainFragment extends Fragment {
         btnAppeals.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_FOR_APPEALS))));
     }
-
 }

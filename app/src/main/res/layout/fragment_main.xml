@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
-    tools:context=".presentation.pages.MainFragment">
+    tools:context=".presentation.pages.MainFragment.MainFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/shape_button"
             android:text="@string/magazine"
             android:textAllCaps="false"
             android:textColor="@color/blue"
@@ -38,7 +38,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/shape_button"
             android:text="@string/gomelisp"
             android:textAllCaps="false"
             android:textColor="@color/blue"
@@ -50,7 +50,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_marginHorizontal="@dimen/_15sdp"
             android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/shape_button"
             android:text="@string/appeals"
             android:textAllCaps="false"
             android:textColor="@color/blue"
@@ -63,7 +63,8 @@
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:justificationMode="inter_word"
-            android:text="@string/start_text" />
+            android:text="@string/start_text"
+            tools:ignore="UnusedAttribute" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_1"
@@ -81,7 +82,8 @@
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:justificationMode="inter_word"
-            android:text="@string/text_2" />
+            android:text="@string/text_2"
+            tools:ignore="UnusedAttribute" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card_2"

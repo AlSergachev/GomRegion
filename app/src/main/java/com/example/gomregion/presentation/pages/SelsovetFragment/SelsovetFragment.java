@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation.pages;
+package com.example.gomregion.presentation.pages.SelsovetFragment;
 
 import android.content.Context;
 import android.graphics.Point;
@@ -19,13 +19,12 @@ import android.view.WindowManager;
 import com.example.gomregion.R;
 import com.example.gomregion.data.DataProvider;
 import com.example.gomregion.domain.model.Selsovet;
-import com.example.gomregion.presentation.SelsovetAdapter;
 
 import java.util.ArrayList;
 
-public class FirstFragment extends Fragment {
+@SuppressWarnings({"FieldCanBeLocal", "SameParameterValue"})
+public class SelsovetFragment extends Fragment {
 
-    private ArrayList<Selsovet> selsovetList;
     private final int WIDTH_ITEM = 170;
 
     @Override
@@ -37,13 +36,16 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View inflaterView = inflater.inflate(R.layout.fragment_first, container, false);
-        selsovetList = DataProvider.dataProviderSelsovet();
+        ArrayList<Selsovet> selsovetList = DataProvider.dataProviderSelsovet();
+        setAdapter(inflaterView, selsovetList);
+        return inflaterView;
+    }
 
+    private void setAdapter(View inflaterView, ArrayList<Selsovet> selsovetList) {
         RecyclerView recyclerView = inflaterView.findViewById(R.id.recycler_view_inst);
         SelsovetAdapter adapter = new SelsovetAdapter(inflaterView.getContext(), selsovetList);
         recyclerView.setLayoutManager(new GridLayoutManager(inflaterView.getContext(), getCollum()));
         recyclerView.setAdapter(adapter);
-        return inflaterView;
     }
 
     private int getCollum() {
@@ -51,7 +53,7 @@ public class FirstFragment extends Fragment {
         Display display = wm.getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-        return size.x/dpToPx(WIDTH_ITEM);
+        return size.x / dpToPx(WIDTH_ITEM);
     }
 
     private int dpToPx(int dp) {

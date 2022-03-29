@@ -10,7 +10,6 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.gomregion.databinding.ActivityMainBinding;
 import com.example.gomregion.domain.utilities.Links;
-import com.example.gomregion.presentation.FragmentAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,12 +26,11 @@ public class MainActivity extends AppCompatActivity {
         setTabLayout();
     }
 
-    private void setAdapter(){
+    private void setAdapter() {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentAdapter fragmentAdapter = new FragmentAdapter(fragmentManager, getLifecycle());
+        MainAdapter fragmentAdapter = new MainAdapter(fragmentManager, getLifecycle());
         binding.pager.setAdapter(fragmentAdapter);
     }
-
 
     private void setListeners() {
         binding.icTelegram.setOnClickListener(v ->
@@ -51,17 +49,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_FACEBOOK))));
     }
 
-
-    private void setTabLayout(){
+    private void setTabLayout() {
         binding.tabLayout.addTab(binding.tabLayout.newTab());
         binding.tabLayout.addTab(binding.tabLayout.newTab());
         binding.tabLayout.addTab(binding.tabLayout.newTab());
         binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override public void onTabSelected(TabLayout.Tab tab) {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
                 binding.pager.setCurrentItem(tab.getPosition());
             }
-            @Override public void onTabUnselected(TabLayout.Tab tab) {}
-            @Override public void onTabReselected(TabLayout.Tab tab) {}
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
         });
         binding.pager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override

@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
-    tools:context=".presentation.pages.SecondFragment">
+    tools:context=".presentation.pages.JustLinkFragment.JustLinkFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_links"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/light_beige"
         android:layout_gravity="center_vertical"
+        android:background="@color/light_beige"
         android:paddingHorizontal="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

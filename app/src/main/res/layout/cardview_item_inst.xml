@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground"
     android:id="@+id/cardview_item"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_columnWeight="1"
     android:layout_margin="@dimen/_10sdp"
-    app:cardElevation="@dimen/_7sdp"
-    app:cardCornerRadius="@dimen/_20sdp">
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/_20sdp"
+    app:cardElevation="@dimen/_7sdp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical">
+
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imgInst"
-            android:src="@drawable/image_01"
             style="@style/GridLayoutImageStyle"
-            app:riv_oval="true"
-            />
+            android:src="@drawable/image_01"
+            app:riv_oval="true" />
+
         <TextView
             android:id="@+id/textTitle"
             style="@style/GridLayoutTextStyle"
-            android:text="@string/selsovet"/>
+            android:text="@string/selsovet" />
     </LinearLayout>
 
 
