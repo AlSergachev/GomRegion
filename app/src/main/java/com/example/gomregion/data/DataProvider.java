@@ -10,6 +10,7 @@ import com.example.gomregion.domain.model.Selsovet;
 import java.util.ArrayList;
 
 public class DataProvider {
+
     public static ArrayList<Selsovet> dataProviderSelsovet() {
         ArrayList<Selsovet> list = new ArrayList<>();
         list.add(new Selsovet(Links.LINK_INST_FIRST, "Азделинский сельсовет", R.drawable.image_01));

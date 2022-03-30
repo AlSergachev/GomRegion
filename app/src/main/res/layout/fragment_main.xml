@@ -20,42 +20,6 @@
             android:elevation="@dimen/_10sdp"
             app:cardCornerRadius="0dp" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_magazine"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginHorizontal="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/shape_button"
-            android:text="@string/magazine"
-            android:textAllCaps="false"
-            android:textColor="@color/blue"
-            android:textSize="@dimen/_12ssp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_gomelisp"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginHorizontal="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/shape_button"
-            android:text="@string/gomelisp"
-            android:textAllCaps="false"
-            android:textColor="@color/blue"
-            android:textSize="@dimen/_12ssp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_appeals"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginHorizontal="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:background="@drawable/shape_button"
-            android:text="@string/appeals"
-            android:textAllCaps="false"
-            android:textColor="@color/blue"
-            android:textSize="@dimen/_12ssp" />
-
         <TextView
             style="@style/MyTextStyle"
             android:layout_width="match_parent"
@@ -240,6 +204,18 @@
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_appeals"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/shape_button"
+            android:text="@string/appeals"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_12ssp" />
 
     </LinearLayout>
 </ScrollView>
