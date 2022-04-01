@@ -46,6 +46,8 @@ public class DataProvider {
         list.add(new JustLink(R.string.title_06, R.string.description_06, Links.LINK_JUST_SIXTH, R.drawable.just_ic_06, false));
         list.add(new JustLink(R.string.title_07, R.string.description_07, Links.LINK_JUST_SEVENTH, R.drawable.just_ic_07, false));
         list.add(new JustLink(R.string.title_08, R.string.description_08, Links.LINK_JUST_EIGHTH, R.drawable.just_ic_08, false));
+        list.add(new JustLink(R.string.title_09, R.string.description_09, Links.LINK_JUST_NINTH, R.drawable.just_title_09, true));
+        list.add(new JustLink(R.string.title_10, R.string.description_10, Links.LINK_JUST_TENTH, R.drawable.just_title_10, true));
 
         return list;
     }

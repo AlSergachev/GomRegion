@@ -39,5 +39,7 @@ public class Links {
     public static final String LINK_JUST_SIXTH = "https://www.instagram.com/tcson_gomelregion/";
     public static final String LINK_JUST_SEVENTH = "https://www.instagram.com/gu.tsodbo_gr/";
     public static final String LINK_JUST_EIGHTH = "http://gomelrcbs.by/";
+    public static final String LINK_JUST_NINTH = "https://www.beltelecom.by/feedback/1123";
+    public static final String LINK_JUST_TENTH = "http://rayzhilkomhoz.by/";
 }
 
