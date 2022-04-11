@@ -27,7 +27,6 @@ public class JustLinkAdapter extends RecyclerView.Adapter<JustLinkAdapter.MyView
     private final ArrayList<JustLink> list;
     private final Context context;
     private int widthDisplay;
-    private ImageView img;
     float ratio;
 
     public JustLinkAdapter(Context context, ArrayList<JustLink> list) {
@@ -68,7 +67,7 @@ public class JustLinkAdapter extends RecyclerView.Adapter<JustLinkAdapter.MyView
 
     private void setImageToCard(MyViewHolder holder, int imgId, float ratio) {
         int heightImg = (int) (widthDisplay * ratio);
-        img = new ImageView(context);
+        ImageView img = new ImageView(context);
         img.setImageResource(imgId);
         holder.cardViewTitle.addView(img, widthDisplay, heightImg);
     }
