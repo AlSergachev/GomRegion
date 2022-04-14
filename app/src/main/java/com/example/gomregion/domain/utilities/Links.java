@@ -30,6 +30,7 @@ public class Links {
     public static final String LINK_INST_SIXTEENTH = "https://www.instagram.com/priborselispolkom/";
     public static final String LINK_INST_SEVENTEENTH = "https://www.instagram.com/grabovselisp/";
     public static final String LINK_INST_EIGHTEENTH = "https://www.instagram.com/markov_sel/?utm_medium=copy_link";
+    public static final String LINK_INST_NINETEENTH = "https://www.instagram.com/zyabrovselispolkom/?igshid=YmMyMTA2M2Y=";
 
     public static final String LINK_JUST_FIRST = "http://gomelisp.gov.by/";
     public static final String LINK_JUST_SECOND = "https://sozhnews.by/";

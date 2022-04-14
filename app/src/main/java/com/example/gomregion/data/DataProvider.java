@@ -31,6 +31,7 @@ public class DataProvider {
         list.add(new Selsovet(Links.LINK_INST_SIXTEENTH, "Приборский сельсовет", R.drawable.image_16));
         list.add(new Selsovet(Links.LINK_INST_SEVENTEENTH, "Грабовский сельсовет", R.drawable.image_17));
         list.add(new Selsovet(Links.LINK_INST_EIGHTEENTH, "Марковичский сельсовет", R.drawable.image_18));
+        list.add(new Selsovet(Links.LINK_INST_NINETEENTH, "Зябровский сельсовет", R.drawable.image_19));
 
         return list;
     }
