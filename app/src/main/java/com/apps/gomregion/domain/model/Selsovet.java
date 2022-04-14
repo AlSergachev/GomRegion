@@ -1,4 +1,4 @@
-package com.example.gomregion.domain.model;
+package com.apps.gomregion.domain.model;
 
 public class Selsovet {
     private final String link;

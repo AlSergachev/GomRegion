@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation.activity;
+package com.apps.gomregion.presentation.activity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.gomregion.databinding.ActivityMainBinding;
-import com.example.gomregion.domain.utilities.Links;
+import com.apps.gomregion.databinding.ActivityMainBinding;
+import com.apps.gomregion.domain.utilities.Links;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation.pages.JustLinkFragment;
+package com.apps.gomregion.presentation.pages.JustLinkFragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,8 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.gomregion.R;
-import com.example.gomregion.domain.model.JustLink;
+import com.apps.gomregion.R;
+import com.apps.gomregion.domain.model.JustLink;
 
 import java.util.ArrayList;
 

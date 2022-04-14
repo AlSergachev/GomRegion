@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation.pages.JustLinkFragment;
+package com.apps.gomregion.presentation.pages.JustLinkFragment;
 
 import android.os.Bundle;
 
@@ -10,9 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.gomregion.R;
-import com.example.gomregion.data.DataProvider;
-import com.example.gomregion.domain.model.JustLink;
+import com.apps.gomregion.R;
+import com.apps.gomregion.data.DataProvider;
+import com.apps.gomregion.domain.model.JustLink;
 
 import java.util.ArrayList;
 

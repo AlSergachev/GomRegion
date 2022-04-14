@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
-    tools:context=".presentation.pages.JustLinkFragment.JustLinkFragment">
+    tools:context="com.apps.gomregion.presentation.pages.JustLinkFragment.JustLinkFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_links"

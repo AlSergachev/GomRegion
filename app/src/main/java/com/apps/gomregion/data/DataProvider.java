@@ -1,11 +1,11 @@
-package com.example.gomregion.data;
+package com.apps.gomregion.data;
 
 import androidx.annotation.NonNull;
 
-import com.example.gomregion.R;
-import com.example.gomregion.domain.model.JustLink;
-import com.example.gomregion.domain.utilities.Links;
-import com.example.gomregion.domain.model.Selsovet;
+import com.apps.gomregion.domain.model.JustLink;
+import com.apps.gomregion.domain.model.Selsovet;
+import com.apps.gomregion.domain.utilities.Links;
+import com.apps.gomregion.R;
 
 import java.util.ArrayList;
 

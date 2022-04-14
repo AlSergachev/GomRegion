@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation.pages.MainFragment;
+package com.apps.gomregion.presentation.pages.MainFragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -19,8 +19,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.example.gomregion.R;
-import com.example.gomregion.domain.utilities.Links;
+import com.apps.gomregion.domain.utilities.Links;
+import com.apps.gomregion.R;
 
 public class MainFragment extends Fragment {
 

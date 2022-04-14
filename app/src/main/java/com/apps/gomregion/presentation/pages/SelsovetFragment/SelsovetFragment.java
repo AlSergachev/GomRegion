@@ -1,4 +1,4 @@
-package com.example.gomregion.presentation.pages.SelsovetFragment;
+package com.apps.gomregion.presentation.pages.SelsovetFragment;
 
 import android.content.Context;
 import android.graphics.Point;
@@ -16,9 +16,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
-import com.example.gomregion.R;
-import com.example.gomregion.data.DataProvider;
-import com.example.gomregion.domain.model.Selsovet;
+import com.apps.gomregion.R;
+import com.apps.gomregion.data.DataProvider;
+import com.apps.gomregion.domain.model.Selsovet;
 
 import java.util.ArrayList;
 
