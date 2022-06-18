@@ -32,6 +32,7 @@
     <string name="selsovet">Какой-то сельсовет</string>
     <string name="our_selsipolcoms">Наши сельисполкомы</string>
     <string name="appeals">Для обращений граждан</string>
+    <string name="share">Поделиться приложением</string>
     <string name="to_link">Перейти на сайт</string>
 
     <string name="title_01">
@@ -141,4 +142,5 @@
         реализации уставных задач предприятием создано и работает девять ремонтно-эксплуатационных
         цехов в различных населенных пунктах района.
     </string>
+    <string name="qr">Отсканируйте QR-код</string>
 </resources>

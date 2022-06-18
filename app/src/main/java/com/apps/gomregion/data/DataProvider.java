@@ -9,7 +9,8 @@ import com.apps.gomregion.R;
 
 import java.util.ArrayList;
 
-public class DataProvider {
+public class
+DataProvider {
 
     public static ArrayList<Selsovet> dataProviderSelsovet() {
         ArrayList<Selsovet> list = new ArrayList<>();

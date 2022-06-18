@@ -217,5 +217,16 @@
             android:textColor="@color/blue"
             android:textSize="@dimen/_12ssp" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/shape_button"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_12ssp" />
     </LinearLayout>
 </ScrollView>

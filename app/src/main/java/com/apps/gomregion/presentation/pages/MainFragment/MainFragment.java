@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -25,16 +26,24 @@ import com.apps.gomregion.R;
 public class MainFragment extends Fragment {
 
     AppCompatButton btnAppeals;
+    AppCompatButton btnShare;
     CardView card;
     ImageView img;
     View mainView;
     int widthDisplay;
+    AlertDialog alert;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         mainView = view;
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+        //LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog, null);
+        builder.setView(dialogView);
+        alert = builder.create();
         return view;
     }
 
@@ -44,6 +53,7 @@ public class MainFragment extends Fragment {
         getWidthDisplay();
         setImages();
         btnAppeals = view.findViewById(R.id.btn_appeals);
+        btnShare = view.findViewById(R.id.btn_share);
         setListeners();
     }
 
@@ -73,5 +83,6 @@ public class MainFragment extends Fragment {
     private void setListeners() {
         btnAppeals.setOnClickListener(v ->
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Links.LINK_FOR_APPEALS))));
+        btnShare.setOnClickListener(v -> alert.show());
     }
 }
